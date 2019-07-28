@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<style>
+	* {box-sizing: border-box;}
+
+	body { 
+	  margin: 0;
+	  font-family: Arial, Helvetica, sans-serif;
+	}
+
+	.header {
+	  overflow: hidden;
+	  background-color: cyan;
+	  padding: 20px 10px;
+	  
+	}
+
+	.header a {
+	  float: left;
+	  color: black;
+	  text-align: center;
+	  padding: 12px;
+	  text-decoration: none;
+	  font-size: 18px; 
+	  line-height: 25px;
+	  border-radius: 4px;
+	}
+
+	.header a.logo {
+	  font-size: 25px;
+	  font-weight: bold;
+	}
+
+
+	.header a.active {
+	  background-color: dodgerblue;
+	  color: white;
+	}
+
+	.header-right {
+	  float: right;
+	}
+
+	@media screen and (max-width: 500px) {
+	  .header a {
+		float: none;
+		display: block;
+		text-align: left;
+	  }
+	  
+	  .header-right {
+		float: none;
+	  }
+	 
+	}
+
+	 .footer {
+	   position: fixed;
+	   left: 0;
+	   bottom: 0;
+	   width: 100%;
+	   background-color: cyan;
+	   text-align: center;
+	}
+
+	#logo{
+		height:47px ;
+		width:140px ;
+
+	}
+
+	#myImg{
+		width: 200px;
+		height: 320px;
+		float: left;
+	}
+	
+	#details{
+		
+		padding-left:280px;
+	}
+	
+	#news-here{
+		display: block;
+		
+	}
+	#content
+	{
+		padding-left:280px;
+	}
+
+</style>
+
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="scriptForApi.js"></script>
+
+</head>
+<body>
+<header>
+</header>
+<div class="header">
+  <img id="logo" src="news.png" alt="Girl in a jacket">
+  <div class="header-right">
+    
+  </div>
+</div>
+
+	
+	<center><h1 style="text: green">Top Headlines of the Day</h1></center><br>
+	
+	<div id="news-here">
+	
+			<div style="padding-left:20px; padding-right: 20px;">
+
+				<figure><img id="myImg" alt"" /></figure>
+				
+				<div id="main-content" style="padding-left: 20px;">
+				
+						<div id="details">
+						
+							<h2 id="title"></h2><br><br>
+							
+							<p id="description"></p>
+						
+						</div>
+							
+							
+							
+						<div id="content" >
+							
+							<p id="more-content"></p>
+							
+						</div><br><br><br><br><br>
+						
+						<div id="read-more" >
+							<br><br>
+							<a id="complete-news" style="padding-left:60px;">Click to Read More..</a>
+							
+						</div>
+						
+						<br><br>
+				
+				</div>
+				
+				<button onclick="next()">Next News</button>
+				
+				<p id="news-source-name"></p>
+				<p id="total-results"></p>
+				
+
+			</div>
+	</div>		
+
+<div class="footer">
+  <p>Copyrights Registered</p>
+</div>
+
+
+
+</body>
+</html>
